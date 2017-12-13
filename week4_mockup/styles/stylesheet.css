@@ -1,0 +1,133 @@
+body {
+    font-family: Verdana, Helvetica, FreeSans, sans-serif ;
+}
+
+
+header h1 { 
+  /* color: rebeccapurple; */
+  color: #663399;  /* this is the same as rebeccapurple - for some reason the CSS code verification didn't like rebecaapurple */ 
+  font-size: 1.5rem;
+  padding: 1rem;  /* add space around h1 - otherwise it gets crowded */
+  font-family: Verdana, Helvetica, FreeSans, sans-serif ;
+  width: 80% ;  /* note setting entire page width to max of 80% */
+  text-align: center ;
+  font: bold ;
+}
+/* These CSS elements are used to create a horizontal menu bar to appear at the top in <nav>
+        Only apply this to class "nav-header"  - separate code for "nav-photo"  */
+    /* First, remove the bullets and the margins and padding from the menu ul list */
+ul.nav-header{
+      list-style-type: none;         /* removes the bullets */
+      overflow: hidden;              /*  hidden:if it goes off page - hide */
+      background-color: #663399;     /* = rebeccapurple  */
+      font-family: Verdana, Helvetica, FreeSans, sans-serif ;
+      width: 80% ;  /*set menu bar to extend horizontally across page  keep this to 80% */
+    }
+    
+    li.nav-header { 
+        text-align: center ;
+        color: white ;
+        float: left;
+        border-right: 3px solid gray ;  /* add a border vertical line to separate the list names */
+        width: 13% ;  /* not sure what is the best way - use width or padding? would like to find... */ 
+                      /* ...a method to display across the entire width  */
+    }
+    
+    li.nav-header a {
+        display: block ;
+        color: white ; 
+        text-align: center ;
+        padding: 14px 16px ;
+        text-decoration: none ; 
+        list-style-type: none ;
+    }
+    /* Change the link color to green on hover if .active:  not instantiated */
+    li.nav-header a:hover:not(.active) {
+      background-color: darkgreen; 
+    }
+
+    /* Change color of active link to slategray to let users know which page they are on 
+      This is applied to both top menu bar and the left navigation bar */
+    .active {
+    background-color: slategray;
+    }
+
+
+ aside {  
+  /* clear float, float=left;  background color=mediumpurple font color=white */
+    clear: both ;
+    float: left;
+    text-align: center ;
+    min-height: 30rem;    /* set minimum height to match article height */
+    width: 15%;
+    color: white ;
+    background-color: mediumpurple;  
+  }     
+
+  /* "nav-phot" is the navigation bar on the left used to select the photo to be displayed
+     In aside add ul & define class=nav-photo */
+ul.nav-photo{
+      list-style-type: none;  /* removes the bullets */
+      margin: auto;
+      overflow: hidden;
+      font-family: Verdana, Helvetica, FreeSans, sans-serif ;
+    }
+
+    li.nav-photo { 
+        color: white ;
+        padding: 1rem 2rem 1rem 2rem   /* add 2 rem padding on right/lef and only 1 on top/bottom */
+          
+    }
+    
+    li.nav-photo a {
+        color: white ; 
+        display: block ;  /* make this a block without borders - so that padding can be added ... */ 
+                          /* ...to better highlight selection  */
+        padding: 14px 16px ;  /* padding is added to the block area to space out text and highlight bckgrnd */
+        font-size: 0.8rem ;
+        text-align: center ;
+        text-decoration: none ; 
+        list-style-type: none ;
+    }
+    /* Change the link color to darkgray on hover  */
+    li.nav-photo a:hover:not(.active) {
+      background-color: darkslategrey; 
+      }
+
+section {
+      background-color: lightgrey;  
+      font-family: Verdana, Helvetica, FreeSans, sans-serif ;
+      float: left; 
+      width: 65%;   /* nav bar on left=15% - make this 65% for a total of 80% width */
+      min-height: 30rem;   /* set minimum height to match left navigation bar */
+      margin: auto;
+}
+
+figure {
+/* Center, size of the font */  
+      align-content: center;
+      margin: 4rem 0 2rem 0;
+      background-color: lightgrey;  
+      text-align: center;  /* use this to put figure in the center */
+      font-family: Verdana, Helvetica, FreeSans, sans-serif ;
+    }
+
+  figcaption {
+      text-align: center;
+      font-family: Verdana, Helvetica, FreeSans, sans-serif ;
+      font-size: 0.8rem; 
+      padding: 2rem 6rem 2rem 6rem;
+
+    }
+
+footer {
+  /* float the images, create links, center links */
+    clear: both ; 
+    width: 55%; 
+  }
+
+footer a { 
+    float: right;
+    padding: 2rem 2rem; 
+    text-align: center; 
+}
